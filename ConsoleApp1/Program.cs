@@ -21,11 +21,17 @@ namespace ConsoleApp1
     public class Dialog
     {
         public Sparrow speaker1, speaker2;
-        private string[] replicBase = new string[] {
+        private string[] replic1Base = new string[] {
             "Иди своей дорогой сталкер",
             "Ути Собачкеа! Ути Котя! Ути Миша! Уйди отсюда мерское двуногое! Ути Миша!",
             "Го кс 1 на 1",
             "Ёхохо и бутылка пельмений"
+        };
+        private string[] replic2Base = new string[] {
+            "Хорошо пойду своим путем",
+            "Подбери слюни киска",
+            "Го на мидл",
+            "Кефир не ем"
         };
 
         public Dialog(Sparrow Man1, Sparrow Man2)
@@ -39,7 +45,8 @@ namespace ConsoleApp1
 
             for (short i = 0; i <= 5; i++)
             {
-                sayReplic(speaker1, replicBase[r.Next(replicBase.Length - 1)]);
+                sayReplic(speaker1, replic1Base[r.Next(replic1Base.Length - 1)]);
+                sayReplic(speaker2, replic2Base[r.Next(replic2Base.Length - 1)]);
             }
             sayReplic(speaker1, "Kurlic-Kurlic");
             sayReplic(speaker2, "Chiric-Chiric");
